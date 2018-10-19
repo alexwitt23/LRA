@@ -1,0 +1,30 @@
+/************************TRICK HEADER*************************
+PURPOSE:
+    ( Simulate a rocket. )
+LIBRARY DEPENDENCIES:
+    ((rocket/src/rocket.cpp))
+*************************************************************/
+
+#include "sim_objects/default_trick_sys.sm"
+
+##include "rocket/include/rocket.hh"
+
+class RocketSimObject : public Trick::SimObject {
+
+    public:
+    Rocket rocket;
+    double groundAltitude;
+
+    RocketSimObject() {
+
+        ("default_data")    rocket.default_data() ;
+        ("initialization")  rocket.state_init() ;
+        ("derivative")      rocket.state_deriv() ;
+        ("integration") trick_ret = rocket.state_integ() ;
+        ("dynamic_event")   rocket.touch_down(groundAltitude) ;
+    }
+} ;
+
+RocketSimObject dyn ;
+
+IntegLoop dyn_integloop(0.02) dyn;
