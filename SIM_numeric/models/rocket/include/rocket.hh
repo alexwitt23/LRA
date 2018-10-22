@@ -23,11 +23,11 @@ class Rocket {
         double Cd;                           /* -- */
 
         double mass;                         /* kg */
-	double mdot;						 /* kg/s */
-	double massBurn; 					 /* kg */
-	double mass0;						 /* kg */
+	double mdot;			     /* kg/s */
+	double massBurn; 		     /* kg */
+	double mass0;			     /* kg */
 
-        bool apogee;                      	 /* -- */
+        bool touchDown;                      /* -- */
 
         REGULA_FALSI rf ;
 
