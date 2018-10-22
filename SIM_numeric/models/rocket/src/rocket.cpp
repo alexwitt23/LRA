@@ -25,7 +25,7 @@ int Rocket::default_data() {
 	velocity = 0.0;
 	altitude = 0.0;
 
-	apogee = false;
+	touchDown= false;
 	
 	return (0);
 }
@@ -84,7 +84,7 @@ double Rocket::touch_down(double groundAltitude) {
 	double tgo ; 
 	double now ;
 	
-	/* error function: how far the rocket velocity is from 0 */
+	/* error function: how far the rocket altitude is from 0 */
 	rf.error = altitude; 
 	
 	now = get_integ_time() ; 
@@ -95,7 +95,7 @@ double Rocket::touch_down(double groundAltitude) {
 		velocity = 0.0;
 		acceleration = 0.0;
 		apogee = true;
-		std::cout << "Apogee: time = " << now << "." << std::ends;
+		std::cout << "TouchDown: time = " << now << "." << std::ends;
 	}
 	return( tgo ) ;
 }
