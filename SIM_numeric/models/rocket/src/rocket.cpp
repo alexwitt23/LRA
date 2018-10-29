@@ -14,7 +14,7 @@ PROGRAMMERS:
 int Rocket::default_data() {
 	
 	thrust = 10000.0;
-	area = 0.05856;
+	area = 0.00817;
 	Cd = .35300;
 
 	mass0 = 250.0;
