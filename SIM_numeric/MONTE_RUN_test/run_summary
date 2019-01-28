@@ -1,0 +1,14 @@
+
+Monte Carlo complete: 20 runs (20 successful) (0 errors) (0 out of range)
+
+Machine work unit breakdown:
+----------------------------------------------------------------------
+                  machine    units  (units %)  cpu_time (s)  cpu/unit (s)
+----------------------------------------------------------------------
+  1.       DESKTOP-ACPOJI8      20  (100.00%)          4.02          0.20
+
+Total monte carlo time taken: 4.13
+Actual average time per unit (sum of CPU time / number of runs): 0.20
+Effective average time per unit (total time / number of runs): 0.21
+Speedup (sum of CPU time / total time): 0.97
+Efficency (speedup / num slaves): 97.17%

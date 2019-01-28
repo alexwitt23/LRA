@@ -5,7 +5,7 @@ dyn_integloop.getIntegrator(trick.Runge_Kutta_4, 3)
 # The ground is a 1000 meters above sea level.
 dyn.groundAltitude = 0
 
-dyn.rocket.thrust = 10000
+dyn.rocket.thrust = 1000
 
 # Burn fuel
 fuelGone = trick.new_event("fuelGone")
@@ -30,7 +30,7 @@ trick.add_event(deployChute)
 trick.mc_set_enabled(1)
 
 # Sets the number of runs to perform to 20. Trick will not exceed the number of values in an input file.
-trick.mc_set_num_runs(100)
+trick.mc_set_num_runs(20)
 
 # Create and add a new Monte Carlo File variable to the simulation.
 mcvar_thrust_force = trick.MonteVarRandom("dyn.rocket.thrust", trick.MonteVarRandom.GAUSSIAN, "kg.m/s2")
@@ -39,14 +39,14 @@ mcvar_thrust_force = trick.MonteVarRandom("dyn.rocket.thrust", trick.MonteVarRan
 mcvar_thrust_force.set_seed(1)
 
 #set the standard deviation for this bellcurve.
-mcvar_thrust_force.set_sigma(1000)
+mcvar_thrust_force.set_sigma(100)
 
 # Set the center of the bellcurve.
-mcvar_thrust_force.set_mu(10000)
+mcvar_thrust_force.set_mu(1000)
 
 # Set the maximum and minimum values to be generated.
-mcvar_thrust_force.set_max(12000)
-mcvar_thrust_force.set_min(8000)
+mcvar_thrust_force.set_max(1200)
+mcvar_thrust_force.set_min(800)
 
 # The maximum and minimum are absolute values, not relative to mu.
 mcvar_thrust_force.set_min_is_relative(False)
