@@ -21,7 +21,7 @@
 
 %Parachute descent model 3 d.o.f
 %Simon Box 1 May 2006;
-function [tt2,z2]=descentcalc(ttspan2,z02,INTAB4,INTAB1,paratab,altpd,G);
+function [tt2,z2]=descentcalc(ttspan2,z02,INTAB4,INTAB1,paratab,altpd,G,drogue);
 
 if length(paratab)==4;
 Cdd=paratab(1);
@@ -99,7 +99,7 @@ Fdnorm=-1*Vtnorm;%Drag unit vector
 
 
 if zn>=altpd %Calculate drag
-    Fd=Cdd*0.5*rho*Vtmag^2*Ad;
+    Fd=drogue{2}*0.5*rho*Vtmag^2*drogue{3};
 else
     Fd=Cdp*0.5*rho*Vtmag^2*Ap;
     

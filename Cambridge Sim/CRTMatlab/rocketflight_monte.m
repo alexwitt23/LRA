@@ -42,8 +42,9 @@ Ra=varargin{5}; %Launch rail angle(degrees) from vetical 0<Ra<90;
 Rbearing=varargin{6}; %Launch rail bearing (degrees) from north 0<Rbearing<360;
 
 noi=varargin{7};
+drogue=varargin{8};
 
-argmin=7;
+argmin=8;
 label='nofail';
 if nargin>argmin;
     if varargin{8}=='ballisticfailure';
@@ -129,7 +130,7 @@ z0=[Xt(1) Xt(2) Xt(3) Q1(1) Q1(2) Q1(3) Q1(4) 0 0 0 0 0 0];
 %Descent
 z02=[z(end,1) z(end,2) z(end,3) z(end,8) z(end,9) z(end,10)];
 
-[tt2,z2]=descentcalc(ttspan2,z02,INTAB4,INTAB1,paratab,altpd,G);
+[tt2,z2]=descentcalc(ttspan2,z02,INTAB4,INTAB1,paratab,altpd,G,drogue);
 
 sz=size(z);
 sz2=size(z2);
@@ -235,7 +236,7 @@ for monte=2:noi;
     %Descent
     z02=[z(end,1) z(end,2) z(end,3) z(end,8) z(end,9) z(end,10)];
 
-    [tt2,z2]=descentcalc(ttspan2,z02,INTAB4,INTAB1,paratab,altpd,G);
+    [tt2,z2]=descentcalc(ttspan2,z02,INTAB4,INTAB1,paratab,altpd,G,drogue);
 
     sz=size(z);
     sz2=size(z2);
