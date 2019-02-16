@@ -26,7 +26,7 @@ http://thredds.ucar.edu/thredds/ncss/grib/NCEP/GFS/Global_0p5deg?var=Temperature
 
 %http://thredds.ucar.edu/thredds/ncss/grib/NCEP/GFS/Pacific_40km/best/dataset.html
 
-
+% x,y,VALUE,time
 
 %ncdisp('bestT.nc');
 temp = ncread('bestT.nc','Temperature_isobaric');
@@ -62,4 +62,7 @@ view(17,22)
 
 set(gca, 'ZDir', 'reverse')
 %}
+%'dd-mmm-yyyy'    
+
+%atmos = weatherConditions(uwind,vwind,temp,Year,Month,Day,hour,Lat,Long);
 
