@@ -1,33 +1,38 @@
-function [windUH,windVH,tempH,isobaric] =  weather_Grab()
-
-%{
-http://thredds.ucar.edu/thredds/ncss/grib/NCEP/GFS/Global_0p5deg/best?
-north=35.0000&west=-110.000&east=-105.000&south=31.0000
-&time_end=present&time_duration=PT3H&cdf&var=v-component_of_wind_height_above_ground,
-u-component_of_wind_height_above_ground,&accept=netcdf
-
-http://thredds.ucar.edu/thredds/ncss/grib/NCEP/GFS/Global_0p5deg/best?
-north=35.0000&west=-110.000&east=-105.000&south=31.0000
-&accept=netcdf&var=Temperature_pressure&temporal=all
-
-http://thredds.ucar.edu/thredds/ncss/grib/NCEP/GFS/Global_0p5deg/best?
-north=35.0000&west=-110.000&east=-105.000&south=31.0000
-&time_end=present&time_duration=P3D&accept=netcdf&var=v-component_of_wind_height_above_ground,
-u-component_of_wind_height_above_ground,Temperature_sigma
-
-http://thredds.ucar.edu/thredds/ncss/grib/NCEP/GFS/Pacific_40km/best/dataset.html
-
-http://thredds.ucar.edu/thredds/ncss/grib/NCEP/GFS/Global_0p5deg/Temperature_pressure
-http://thredds.ucar.edu/thredds/ncss/grib/NCEP/GFS/Global_0p5deg?var=Temperature_isobaric
-&var=u-component_of_wind_isobaric&var=v-component_of_wind_isobaric&north=35&west=-110&east=-105&south=31&horizStride=1
-&time_start=2019-01-10T00%3A00%3A00Z&time_end=2019-02-25T12%3A00%3A00Z&timeStride=1&vertStride=1&accept=netcdf
-
-%}
-
-%http://thredds.ucar.edu/thredds/ncss/grib/NCEP/GFS/Pacific_40km/best/dataset.html
+clear all; clc;
 
 % x,y,VALUE,time
 
+%% WORKS
+%{
+http://thredds.ucar.edu/thredds/ncss/grib/NCEP/GFS/Global_0p5deg/best?north=47.0126&west=-114.841&east=-112.641&south=44.8534&
+time_start=present&time_duration=PT3H&accept=netcdf&var=v-component_of_wind_height_above_ground,u-component_of_wind_height_above_ground
+%}
+
+% GET THIS TO WORK
+%% Temp
+%{
+http://thredds.ucar.edu/thredds/ncss/grib/NCEP/GFS/Global_0p5deg/best?north=35.0000&west=-110.000&east=-105.000&south=31.0000&
+time_start=present&time_duration=PT3H&accept=netcdf&var=Temperature_isobaric&disableLLSubset=on&disableProjSubset=on&horizStride=1
+%}
+%% U wind
+%{
+http://thredds.ucar.edu/thredds/ncss/grib/NCEP/GFS/Global_0p5deg/best?north=35.0000&west=-110.000&east=-105.000&south=31.0000&
+time_start=present&time_duration=PT3H&accept=netcdf&var=u-component_of_wind_isobaric&disableLLSubset=on&disableProjSubset=on&horizStride=1
+%}
+%% V wind
+%{
+http://thredds.ucar.edu/thredds/ncss/grib/NCEP/GFS/Global_0p5deg/best?north=35.0000&west=-110.000&east=-105.000&south=31.0000&
+time_start=present&time_duration=PT3H&accept=netcdf&var=v-component_of_wind_isobaric&disableLLSubset=on&disableProjSubset=on&horizStride=1
+%}
+
+%% Geopotential height?
+%{
+http://thredds.ucar.edu/thredds/ncss/grib/NCEP/GFS/Global_0p5deg/best?north=35.0000&west=-110.000&east=-105.000&south=31.0000&
+time_start=present&time_duration=PT3H&accept=netcdf&var=Geopotential_height_isobaric&disableLLSubset=on&disableProjSubset=on&horizStride=1
+%}
+Geopotential_height_isobaric&disableLLSubset=on&disableProjSubset=on&horizStride=1
+
+%%
 %ncdisp('bestT.nc');
 temp = ncread('bestT.nc','Temperature_isobaric');
 
@@ -144,5 +149,7 @@ for i = 1:p % iterate over each pressure level
     pressureH(i) = mean(pressuret);
 end
 
-end 
 
+INTAB4 = weatherConditions(windUH,windVH,tempH,isobaric);
+
+LRA_SIM(INTAB4)
