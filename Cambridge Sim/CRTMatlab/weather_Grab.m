@@ -1,4 +1,4 @@
-clear all; clc;
+function [windUH,windVH,tempH,isobaric] =  weather_Grab()
 
 %{
 http://thredds.ucar.edu/thredds/ncss/grib/NCEP/GFS/Global_0p5deg/best?
@@ -144,7 +144,5 @@ for i = 1:p % iterate over each pressure level
     pressureH(i) = mean(pressuret);
 end
 
+end 
 
-INTAB4 = weatherConditions(windUH,windVH,tempH,isobaric);
-
-LRA_SIM(INTAB4);
