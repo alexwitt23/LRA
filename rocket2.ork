@@ -30,7 +30,7 @@
             <subcomponents>
               <tubecoupler>
                 <name>Tube coupler</name>
-                <position type="bottom">0.10159999999999995</position>
+                <position type="absolute">0.5587999999999994</position>
                 <material type="bulk" density="1850.0">Fiberglass</material>
                 <length>0.15239999999999998</length>
                 <radialposition>0.0</radialposition>
@@ -41,7 +41,7 @@
                 <subcomponents>
                   <bulkhead>
                     <name>Bulkhead</name>
-                    <position type="bottom">-0.07619999999999999</position>
+                    <position type="absolute">0.5587999999999994</position>
                     <material type="bulk" density="1850.0">Fiberglass</material>
                     <length>0.00635</length>
                     <radialposition>0.0</radialposition>
@@ -53,7 +53,7 @@
 
               <masscomponent>
                 <name>Black Powder Charge</name>
-                <position type="top">0.5715</position>
+                <position type="absolute">0.5715</position>
                 <packedlength>0.025</packedlength>
                 <packedradius>0.0125</packedradius>
                 <radialposition>0.0</radialposition>
@@ -64,7 +64,7 @@
 
               <shockcord>
                 <name>Shock cord</name>
-                <position type="top">0.30479999999999996</position>
+                <position type="absolute">0.30479999999999996</position>
                 <overridemass>0.262233088675</overridemass>
                 <overridesubcomponents>false</overridesubcomponents>
                 <packedlength>0.1012</packedlength>
@@ -97,7 +97,7 @@
             <subcomponents>
               <parachute>
                 <name>Main Parachute</name>
-                <position type="bottom">-0.35559999999999997</position>
+                <position type="absolute">0.685799999999999</position>
                 <overridemass>1.0205828316</overridemass>
                 <overridesubcomponents>false</overridesubcomponents>
                 <packedlength>0.30479999999999996</packedlength>
@@ -127,7 +127,7 @@
 
               <shockcord>
                 <name>Shock cord</name>
-                <position type="top">0.3429</position>
+                <position type="absolute">1.0032999999999994</position>
                 <overridemass>0.262233088675</overridemass>
                 <overridesubcomponents>false</overridesubcomponents>
                 <packedlength>0.0504</packedlength>
@@ -140,7 +140,7 @@
 
               <parachute>
                 <name>Drogue</name>
-                <position type="top">-0.177800000000002</position>
+                <position type="absolute">0.4825999999999975</position>
                 <overridemass>0.90718474</overridemass>
                 <overridesubcomponents>false</overridesubcomponents>
                 <packedlength>0.07619999999999898</packedlength>
@@ -181,7 +181,7 @@
                 <subcomponents>
                   <masscomponent>
                     <name>Black Powder Charge</name>
-                    <position type="top">0.025399999999999406</position>
+                    <position type="absolute">1.0920499999999982</position>
                     <packedlength>0.025</packedlength>
                     <packedradius>0.0125</packedradius>
                     <radialposition>0.0</radialposition>
@@ -192,7 +192,7 @@
 
                   <bulkhead>
                     <name>Bulkhead</name>
-                    <position type="bottom">0.00635</position>
+                    <position type="absolute">1.162049999999999</position>
                     <material type="bulk" density="1850.0">Fiberglass</material>
                     <length>0.00635</length>
                     <radialposition>0.0</radialposition>
@@ -215,7 +215,7 @@
             <subcomponents>
               <masscomponent>
                 <name>Payload</name>
-                <position type="bottom">-0.17779999999999999</position>
+                <position type="absolute">1.1747499999999982</position>
                 <overridemass>4.535923700000001</overridemass>
                 <overridesubcomponents>false</overridesubcomponents>
                 <packedlength>0.40004999999999996</packedlength>
@@ -228,7 +228,7 @@
 
               <innertube>
                 <name>Inner Tube</name>
-                <position type="bottom">-0.1651</position>
+                <position type="absolute">1.1620499999999983</position>
                 <material type="bulk" density="1300.0">Blue tube</material>
                 <length>0.42545</length>
                 <radialposition>0.0</radialposition>
@@ -242,7 +242,7 @@
                 <subcomponents>
                   <bulkhead>
                     <name>Bulkhead</name>
-                    <position type="bottom">0.0</position>
+                    <position type="absolute">1.5811499999999983</position>
                     <material type="bulk" density="680.0">Cardboard</material>
                     <length>0.00635</length>
                     <radialposition>0.0</radialposition>
@@ -288,7 +288,7 @@
             <subcomponents>
               <tubecoupler>
                 <name>Electronics coupler</name>
-                <position type="top">-0.1397</position>
+                <position type="absolute">1.6128999999999982</position>
                 <material type="bulk" density="1850.0">Fiberglass</material>
                 <length>0.3302</length>
                 <radialposition>0.0</radialposition>
@@ -299,7 +299,7 @@
                 <subcomponents>
                   <masscomponent>
                     <name>Electronics</name>
-                    <position type="bottom">-0.0127</position>
+                    <position type="absolute">1.6128999999999982</position>
                     <overridemass>2.2679618500000003</overridemass>
                     <overridesubcomponents>false</overridesubcomponents>
                     <packedlength>0.30479999999999996</packedlength>
@@ -312,7 +312,7 @@
 
                   <bulkhead>
                     <name>Bulkhead</name>
-                    <position type="bottom">0.0</position>
+                    <position type="absolute">1.6128999999999982</position>
                     <material type="bulk" density="950.0">Kraft phenolic</material>
                     <length>0.00635</length>
                     <radialposition>0.0</radialposition>
@@ -322,7 +322,7 @@
 
                   <bulkhead>
                     <name>Bulkhead</name>
-                    <position type="bottom">-0.32384999999999997</position>
+                    <position type="absolute">1.6128999999999982</position>
                     <material type="bulk" density="950.0">Kraft phenolic</material>
                     <length>0.00635</length>
                     <radialposition>0.0</radialposition>
@@ -336,7 +336,7 @@
                 <name>Airbrakes</name>
                 <color red="0" green="0" blue="0"/>
                 <linestyle>dashed</linestyle>
-                <position type="top">0.2032</position>
+                <position type="absolute">1.9557999999999984</position>
                 <overridemass>0.90718474</overridemass>
                 <overridesubcomponents>false</overridesubcomponents>
                 <packedlength>0.1016</packedlength>
@@ -349,7 +349,7 @@
 
               <freeformfinset>
                 <name>Freeform fin set </name>
-                <position type="bottom">-0.0254</position>
+                <position type="absolute">2.7177999999999978</position>
                 <finish>normal</finish>
                 <material type="bulk" density="1780.0">Carbon fiber</material>
                 <fincount>4</fincount>
@@ -369,7 +369,7 @@
 
               <innertube>
                 <name>Inner Modular Fins</name>
-                <position type="bottom">-0.08889999999999999</position>
+                <position type="absolute">2.7812999999999977</position>
                 <material type="bulk" density="1780.0">Carbon fiber</material>
                 <length>0.127</length>
                 <radialposition>0.0</radialposition>
@@ -383,7 +383,7 @@
 
               <centeringring>
                 <name>Centering ring</name>
-                <position type="bottom">-0.40639999999999943</position>
+                <position type="absolute">2.5844499999999977</position>
                 <material type="bulk" density="1850.0">Fiberglass</material>
                 <length>0.00635</length>
                 <radialposition>0.0</radialposition>
@@ -394,7 +394,7 @@
 
               <centeringring>
                 <name>Centering ring</name>
-                <position type="bottom">-0.21589999999999998</position>
+                <position type="absolute">2.7749499999999974</position>
                 <material type="bulk" density="1850.0">Fiberglass</material>
                 <length>0.00635</length>
                 <radialposition>0.0</radialposition>
@@ -405,7 +405,7 @@
 
               <centeringring>
                 <name>Centering ring</name>
-                <position type="bottom">-0.08255</position>
+                <position type="absolute">2.9082999999999974</position>
                 <material type="bulk" density="1850.0">Fiberglass</material>
                 <length>0.00635</length>
                 <radialposition>0.0</radialposition>
@@ -416,7 +416,7 @@
 
               <launchlug>
                 <name>Launch lug</name>
-                <position type="middle">-0.6603999999999998</position>
+                <position type="absolute">1.699499999999998</position>
                 <finish>normal</finish>
                 <material type="bulk" density="680.0">Cardboard</material>
                 <radius>0.005</radius>
@@ -427,7 +427,7 @@
 
               <launchlug>
                 <name>Launch lug</name>
-                <position type="middle">0.05079999999999995</position>
+                <position type="absolute">2.4106999999999976</position>
                 <finish>normal</finish>
                 <material type="bulk" density="680.0">Cardboard</material>
                 <radius>0.005</radius>
@@ -438,7 +438,7 @@
 
               <bulkhead>
                 <name>Bulkhead</name>
-                <position type="bottom">-0.91059</position>
+                <position type="absolute">2.0802599999999973</position>
                 <material type="bulk" density="680.0">Cardboard</material>
                 <length>0.00635</length>
                 <radialposition>0.0</radialposition>
@@ -448,7 +448,7 @@
 
               <innertube>
                 <name>Motor Tube</name>
-                <position type="bottom">0.10159999999999998</position>
+                <position type="absolute">2.0878799999999975</position>
                 <material type="bulk" density="1850.0">Fiberglass</material>
                 <length>1.0109199999999998</length>
                 <radialposition>0.0</radialposition>
@@ -462,7 +462,7 @@
                 <subcomponents>
                   <centeringring>
                     <name>Motor Retaining Ring</name>
-                    <position type="bottom">0.0</position>
+                    <position type="absolute">2.0878799999999975</position>
                     <overridemass>0.2551457079</overridemass>
                     <overridesubcomponents>false</overridesubcomponents>
                     <material type="bulk" density="2700.0">Aluminum</material>
@@ -483,7 +483,7 @@
                 </appearance>
                 <color red="102" green="102" blue="102"/>
                 <linestyle>dashdot</linestyle>
-                <position type="bottom">-0.7365999999999995</position>
+                <position type="absolute">2.247899999999998</position>
                 <material type="bulk" density="2700.0">Aluminum</material>
                 <length>0.0127</length>
                 <radialposition>0.0</radialposition>
@@ -496,7 +496,7 @@
                 <name>Body Tube Cut</name>
                 <color red="255" green="0" blue="0"/>
                 <linestyle>solid</linestyle>
-                <position type="bottom">-0.6095999999999995</position>
+                <position type="absolute">2.387599999999998</position>
                 <overridemass>0.0</overridemass>
                 <overridesubcomponents>false</overridesubcomponents>
                 <material type="bulk" density="680.0">Cardboard</material>
@@ -530,7 +530,7 @@
             <subcomponents>
               <innertube>
                 <name>Inner Tube</name>
-                <position type="bottom">-0.1016</position>
+                <position type="absolute">2.9209999999999976</position>
                 <material type="bulk" density="1850.0">Fiberglass</material>
                 <length>0.07619999999999999</length>
                 <radialposition>0.0</radialposition>
