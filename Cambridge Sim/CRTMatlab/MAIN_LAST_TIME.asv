@@ -23,9 +23,7 @@ while choice
         coords = [35.0000,-110.000,-105.000,31.0000];
         choice = false;
     
-    elseif choice == 2
-        coords = [33.0000,-110.000,-109.000,32.0000];
-        choice = false;   
+        
         
     elseif choice == 3
         weatherGrabbed = true;

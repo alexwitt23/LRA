@@ -20,11 +20,10 @@ n = input(':> ','s');
 
 %% Counters for parts
 numNoseCone = 0;
-numCylinders = 0; 
-numTubes = 0;
-numConicalTransitions = 0;
-numPointMasses = 0;
-numParachutes = 0;
+cylinders 
+tubes 
+conical transitions
+point masses 
 switch n
 %%  
     case 1 % nosecone     
@@ -83,6 +82,16 @@ switch n
 
     case 4 % conical transitions 
     
+    %{
+    %% CONICAL TRANSITIONS
+    ct1={�cone trans�,�yes�,Ud,Dd,dr,L,M,X}% the string �yes� identi?es that the outer surface of the cylinder forms part of the rocket�s body surface
+    Ud: upstream diameter
+    Dd: downstream diamtere
+    dr: maximum body diameter
+    L: length 
+    M: mass
+    X: position
+    %}
     disp('Enter the name of the conical transition');
     conTrans = input(':> ','s');
         
@@ -121,7 +130,7 @@ switch n
     %(Small Heat Shield + Quicklinks)
     pm2 = {'pm',.108,0,1.37};
     %%%%%%%%%%%%%%%%%%
-    case 6 % parachutes
+        case 6 % parachutes
     %{
     %% PARACHUTES
     p1={�parachute�,Cd,Ap,M,X}
