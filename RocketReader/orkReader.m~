@@ -11,9 +11,6 @@ cylinders
 
 tubes 
     motor tube
-    tube coupler
-
-
 conical transitions
 
 point masses
@@ -41,8 +38,7 @@ subcomp = orderfields(file.openrocket.rocket.subcomponents.stage.subcomponents);
 
 %nose cone 
 nosecone = subcomp.nosecone;
-
-n1 = componentReader(nosecone);
+n1 = {'nose',nosecone.shape.Text,str2num(nosecone.length.Text),2*str2num(nosecone.aftradius.Text),str2num(nosecone.overridemass.Text),0};
 
 totalLength = totalLength + str2num(nosecone.length.Text);
 
@@ -52,25 +48,13 @@ totalLength = totalLength + str2num(nosecone.length.Text);
 
 try 
      nosecone_subcomponents = nosecone.subcomponents;
-
-try
-    bulkhead = nosecone_subcomponents.tubecoupler.subcomponents; % look for bulkhead
-    b = componentReader(bulkhead)
 catch
     pass;
 end 
 
-if exist('nosecone_subcomponents','var')
-    
-    fields = fieldnames(nosecone_subcomponents);
-    
-    for i = 1:length(fields)
-    
-        a = componentReader(nosecone_subcomponents.(fields{i}));
-        disp(a)
-        
-    end 
-    
+exists = existnosecone_subcomponents
+if exist(nosecone_subcomponents)
+    disp('yeah');
 end 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
